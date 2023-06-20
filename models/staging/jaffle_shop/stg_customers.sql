@@ -1,4 +1,4 @@
-with customers as (
+/* with customers as (
     
     select 
         id as customer_id,
@@ -9,3 +9,16 @@ with customers as (
 )
 
 select * from customers
+*/
+with source as (
+    slect * fro raw.jaffle_shop.customers
+),
+staged as (
+    select
+    id as customer_id,
+    first_name,
+    last_name
+    from source
+)
+
+select * from satged
