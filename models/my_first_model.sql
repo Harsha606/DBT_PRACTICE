@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 with customers as (
 
     select
@@ -16,6 +22,7 @@ orders as (
         user_id as customer_id,
         order_date,
         status
+
 
     from raw.jaffle_shop.orders
 
