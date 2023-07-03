@@ -5,7 +5,3 @@ sources:
     tables:
       - name: customers
       - name: orders
-  - name: stripe
-    database: raw
-    tables:
-        - name: payments
