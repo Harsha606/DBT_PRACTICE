@@ -20,7 +20,7 @@ pivoted as (
         sum(case when payment_method = 'gift_card' then amount else 0 end) as gift_card_transfer_amount
         */
     from payments
-    where status= limit_data_in_dev('success')
+    where status= 'success'
     group by 1
 )
 
